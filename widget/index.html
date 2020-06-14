@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"
+        />
+        <meta
+            name="format-detection"
+            content="telephone=no,email=no,date=no,address=no"
+        />
+        <title>入口页面</title>
+        <link rel="stylesheet" href="./res/css/sm.min.css" />
+        <style>
+            .bar-nav {
+                background-color: #0099ff;
+            }
+
+            .bar-nav .title {
+                color: #000000;
+            }
+        </style>
+    </head>
+
+    <body style="background-color: #fff">
+        <script>
+            window.apiready = function() {
+                var timer = 0
+                api.addEventListener({
+                name: 'keyback'
+                }, function (ret, err) {
+                var currentTime = +new Date()
+                api.historyBack(function (ret, err) {
+                    if (!ret.status) {
+                    if ((currentTime - timer) > 2000) {
+                        timer = currentTime
+                        api.toast({
+                        msg: '再按一次返回键退出app',
+                        duration: 2000,
+                        location: 'bottom'
+                        })
+                    } else {
+                        api.closeWidget({
+                        id: 'A6061873897289', //这里改成自己的应用ID
+                        retData: {name: 'closeWidget'},
+                        silent: true
+                        })
+                    }
+                    }
+                })
+                })
+                api.setStatusBarStyle({
+                    style: "light"
+                });
+                api.openFrame({
+                    name: "index",
+                    // url: 'dist/html/index.html', //上传打包时使用
+                    url: "http://10.0.0.14:8010/html/index.html", //调试时使用
+                    rect: {
+                        x: 0,
+                        y: 0,
+                        w: "auto",
+                        h: "auto"
+                    },
+                    allowEdit:true,
+                    bounces: false,
+                    vScrollBarEnabled: true,
+                    hScrollBarEnabled: true
+                });
+            };
+        </script>
+    </body>
+</html>

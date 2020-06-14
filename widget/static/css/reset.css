@@ -1,0 +1,24 @@
+/* *{margin:0;  padding:0;box-sizing:border-box;}
+*::before{box-sizing: border-box;}
+*::after{box-sizing:border-box;}
+
+ul,ol{list-style:none;}
+h1,h2,h3,h4,h5,h6{ font-weight:normal;}
+a{text-decoration: none;color:inherit;}
+img {vertical-align: top;}
+input,button{border: none;outline: none;}
+
+
+body{font:15px/1.5 Helvetica,sans-serif;color:#333; background: #FBFCFD; ;} */
+.icon {width: 1em; height: 1em;vertical-align: -0.15em;fill: currentColor;overflow: hidden;}
+@font-face {
+  font-family: 'iconfont';  /* project id 730236 */
+  src: url('//at.alicdn.com/t/font_730236_ndd2y0owkz.eot');
+  src: url('//at.alicdn.com/t/font_730236_ndd2y0owkz.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_730236_ndd2y0owkz.woff') format('woff'),
+  url('//at.alicdn.com/t/font_730236_ndd2y0owkz.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_730236_ndd2y0owkz.svg#iconfont') format('svg');
+}
+button{
+  outline: none;
+}
