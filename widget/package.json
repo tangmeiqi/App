@@ -39,7 +39,7 @@
     "glob": "^7.1.1",
     "html-loader": "^0.4.4",
     "html-webpack-plugin": "^2.28.0",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.13.1",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
